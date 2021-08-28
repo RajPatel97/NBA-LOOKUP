@@ -44,3 +44,29 @@ li a:hover:not(.active) {
   color: rgb(66, 66, 66);
   background-color: aqua;
 }
+
+.search-wrapper{
+  
+
+
+}
+
+input{
+  background-color:rgb(66, 66, 66);
+  border-style: solid;
+  border-color: palevioletred;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen','Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',sans-serif;
+  border-radius: 18px;
+  width: 400px;
+  height: 40px;
+  text-align: center;
+  color: white;
+  position: absolute; left: 50%; top: 57%;
+  transform: translate(-50%, -50%);
+  
+}
+.btn{
+  position: absolute; left: 50%; top: 62%;
+  transform: translate(-50%, -50%);
+
+}
