@@ -17,6 +17,7 @@ const useStyles = makeStyles({
     backgroundColor: 'rgb(66, 66, 66)',
     color: 'white',
     borderStyle:'solid',
+    borderColor:"palevioletred",
   },
   bullet: {
     display: 'inline-block',
