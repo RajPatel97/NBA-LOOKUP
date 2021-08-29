@@ -1,7 +1,9 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import {withStyles, makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import Button from '@material-ui/core/Button';
+import Tooltip from '@material-ui/core/Tooltip';
+import Typography from '@material-ui/core/Typography';
 //conponent is from: https://material-ui.com/components/cards/
 
 const useStyles = makeStyles({
@@ -33,6 +35,16 @@ const useStyles = makeStyles({
 
 });
 
+const HtmlTooltip = withStyles((theme) => ({
+  tooltip: {
+    backgroundColor: '#f5f5f9',
+    color: 'rgba(0, 0, 0, 0.87)',
+    maxWidth: 220,
+    fontSize: theme.typography.pxToRem(12),
+    border: '1px solid #dadde9',
+  },
+}))(Tooltip);
+
 const playerClick =()=>{
     console.log('player click');
 
@@ -54,9 +66,44 @@ export default function Buttons() {
 
   return (
     <Card className={classes.root}>
-    <Button className={classes.btn} variant="contained" onClick={playerClick} >Player</Button>
-    <Button className={classes.btn} variant="contained" color="primary" onClick={teamClick} >Team</Button>
-      <Button className={classes.btn} variant="contained" color="secondary" onClick={gameClick} >Game</Button>
+    <HtmlTooltip
+        title={
+          <React.Fragment>
+            <Typography color="inherit">Look Up a Current or Retired Player</Typography>
+            <em>{"Click this Box and Enter the Name of the Player in the Search Box. "}</em>
+            <em>{"Displays Stats From All Seasons"}</em>
+          </React.Fragment>
+        }
+      >
+      <Button className={classes.btn} variant="contained" onClick={playerClick} >Player</Button>
+      </HtmlTooltip>
+
+      <HtmlTooltip
+        title={
+          <React.Fragment>
+            <Typography color="inherit">Look Up a Current Team or Any Previous Team in NBA History </Typography>
+            <em>{"Click this Box and Enter the Name of the team in the Search Box. Enter Name and Year If Searching for a Historical Team"}</em>
+            <em>{"Displays Rosters and Season Statistics as well as Outcomes of the Season"}</em>
+          </React.Fragment>
+        }
+      >
+        <Button className={classes.btn} variant="contained" color="primary" onClick={teamClick} >Team</Button>
+      </HtmlTooltip>
+
+      <HtmlTooltip
+        title={
+          <React.Fragment>
+            <Typography color="inherit">Look Up Any Specific Game in NBA History </Typography>
+            <em>{"Click this Box and Enter the date of the Game"}</em>
+            <em>{"Displays the Scores and Statistics of the Game"}</em>
+          </React.Fragment>
+        }
+      >
+        <Button className={classes.btn} variant="contained" color="secondary" onClick={gameClick} >Game</Button>
+      </HtmlTooltip>
+    
+    
+      
     </Card>
   );
 }

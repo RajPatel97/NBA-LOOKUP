@@ -36,28 +36,24 @@ const useStyles = makeStyles({
 
 export default function SimpleCard() {
   const classes = useStyles();
-  const bull = <span className={classes.bullet}>•</span>;
 
   return (
     <Card className={classes.root}>
       <CardContent>
         <Typography className={classes.title} color="textSecondary" gutterBottom>
-          Word of the Day
+        <h1>WELCOME TO NBA LOOKUP</h1>
         </Typography>
         <Typography variant="h5" component="h2">
-          be{bull}nev{bull}o{bull}lent
+        Look up stats and scores of any team and player in NBA History!
         </Typography>
         <Typography className={classes.pos} color="textSecondary">
-          adjective
+        <a className = 'link' href="https://github.com/RajPatel97/NBA-LOOKUP">Check Out the Code Here</a>
         </Typography>
         <Typography variant="body2" component="p">
-          well meaning and kindly.
-          <br />
-          {'"a benevolent smile"'}
+        Created By Raj Patel
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Learn More</Button>
       </CardActions>
     </Card>
   );
