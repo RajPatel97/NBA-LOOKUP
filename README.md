@@ -1,4 +1,4 @@
-# NBA-LOOKUP.com
+# NBA LOOKUP
 
 ## How to Install 
 1. clone the repository to desired directory 
