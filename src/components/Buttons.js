@@ -45,27 +45,35 @@ const HtmlTooltip = withStyles((theme) => ({
   },
 }))(Tooltip);
 
+
+
+
+export default function Buttons(props) {
+  let currentButton = props.currentButton;
+  let setCurrentButton = props.setCurrentButton;
+  const classes = useStyles();
+
 const playerClick =()=>{
-    console.log('player click');
+    setCurrentButton('player');
+    //console.log(currentButton);
 
 }
 
 const teamClick =()=>{
-    console.log('team click');
+    setCurrentButton('team');
+    //console.log(currentButton);
 
 }
 
 const gameClick =()=>{
-    console.log('game click');
+    setCurrentButton('game');
+    //console.log(currentButton);
 
 }
 
-
-export default function Buttons() {
-  const classes = useStyles();
-
   return (
     <Card className={classes.root}>
+    {console.log(currentButton)}
     <HtmlTooltip
         title={
           <React.Fragment>
