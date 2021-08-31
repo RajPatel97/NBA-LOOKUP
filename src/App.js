@@ -9,7 +9,7 @@ import Display from "./components/Display";
 
 function App() {
 
-  const [currentButton, setCurrentButton] = useState('');
+  const [currentButton, setCurrentButton] = useState('player');
   const [searchInput, setSearchInput] = useState('kanye');
 
 
@@ -19,8 +19,7 @@ function App() {
     <SimpleCard/>
     <Buttons currentButton = {currentButton} setCurrentButton = {setCurrentButton}/>
     <SearchBar searchInput ={searchInput} setSearchInput={setSearchInput} />
-    <Display currentButton = {currentButton}/>
-    {console.log(searchInput)}
+    <Display currentButton = {currentButton} searchInput ={searchInput}/>
 
     
     </div>

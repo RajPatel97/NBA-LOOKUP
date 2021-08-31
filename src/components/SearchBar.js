@@ -1,12 +1,12 @@
 const SearchBar = (props) => {
 
-  const searchInput = props.searchInput;
+  //const searchInput = props.searchInput; 
   const setSearchInput = props.setSearchInput;
 
   const handleSubmit = (event)=>{
     event.preventDefault();
     setSearchInput(event.target[0].value)
-    console.log(event.target[0].value)//for dbugging
+    //console.log(event.target[0].value)//for dbugging
   }
 
   
