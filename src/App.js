@@ -9,8 +9,8 @@ import Display from "./components/displays/Display";
 
 function App() {
 
-  const [currentButton, setCurrentButton] = useState('player');
-  const [searchInput, setSearchInput] = useState('kanye');
+  const [currentButton, setCurrentButton] = useState('');
+  const [searchInput, setSearchInput] = useState('Kanye');
 
 
   return (
