@@ -4,7 +4,7 @@ import SimpleCard from "./components/SimpleCard";
 import Buttons from "./components/Buttons";
 import SearchBar from "./components/SearchBar";
 import { useState } from "react";
-import Display from "./components/Display";
+import Display from "./components/displays/Display";
 
 
 function App() {

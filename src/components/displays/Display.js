@@ -9,26 +9,23 @@ const Display = (props) => {
     const currentButton = props.currentButton;
     const searchInput = props.searchInput;
 
-    //add all props for all 3 displays here and pass them into the appropriate component depending on the current button 
-    //get the information from the searchbar fom the app component
 
-
+    //renders the correct component for the type of data
     const getDataRender =()=>{
         if (currentButton === 'player'){
-          return <PlayerDisplay/>
+          return <PlayerDisplay searchInput = {searchInput}/>
         }
         else if (currentButton ==='team'){
-          return <TeamDisplay/>
+          return <TeamDisplay searchInput = {searchInput}/>
         }
         else{
-          return <GameDisplay/>
+          return <GameDisplay searchInput = {searchInput}/>
         }
       }
 
     return ( 
         <div className="display-wrapper">
         {getDataRender()}
-        {console.log(searchInput)}
 
         </div>
      );
