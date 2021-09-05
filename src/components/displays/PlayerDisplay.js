@@ -8,14 +8,8 @@ const PlayerDisplay = (props) => {
     const [error, setError] = useState(null);
     const searchInput = props.searchInput;
     const defaultURL = 'https://www.balldontlie.io/api/v1/players/237';
-    //let Data = useFeach(defaultURL).data//logs the data feach for Lebron James
-    
 
-    //assigning data from call
-    //const firstname = data.first_name;
-    //const [firstname] = useState(data.first_name);
-    //let name = data.first_name;
-
+    //grabbing data when searchbox is used
     useEffect(()=>{
         fetch(defaultURL)
         .then(res => {
@@ -39,6 +33,8 @@ const PlayerDisplay = (props) => {
 
     return ( 
         <div className="playerDisplay-wrapper">
+        <h1 className="name">{currentPlayer.first_name +" "+ currentPlayer.last_name}</h1>
+        <h2 className="team">{currentPlayer.team.full_name}</h2>
         
         </div>
      );
