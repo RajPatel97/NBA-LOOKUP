@@ -23,6 +23,7 @@ const useFeach = (url) => {
         })
     },[url])//takes in an array of dependencies to watch, if in the array the function will fire when the state is changes, in this case when name state is changes
 
+
     return {data, isPending,error}
 }
  
