@@ -41,6 +41,9 @@ const PlayerDisplay = (props) => {
         <div className="playerDisplay-wrapper">
         <h1 className="name">{currentPlayer.first_name +" "+ currentPlayer.last_name}</h1>
         {currentPlayer.team && <h2 className="team-name">{currentPlayer.team.full_name}</h2>}{/*have to load this way or error will show on first render */}
+        <p>Position: {currentPlayer.position}</p>
+        <p>Height: {currentPlayer.height_feet+" ft, "+currentPlayer.height_inches+" in"}</p>
+        <p>Weight: {currentPlayer.weight_pounds} lbs</p>
         
         </div>
      );
