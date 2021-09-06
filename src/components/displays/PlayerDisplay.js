@@ -4,6 +4,7 @@ import useFeach from "../hooks/useFeach";
 
 const PlayerDisplay = (props) => {
     const [currentPlayer, setCurrentPlayer] = useState('');
+    const[playerTeam, setPlayerTeam] = useState('');
     const [isPending, setIsPending] =useState(true);
     const [error, setError] = useState(null);
     const searchInput = props.searchInput;
@@ -31,10 +32,15 @@ const PlayerDisplay = (props) => {
 
     },[searchInput])
 
+    async function getTeam(){
+        console.log(currentPlayer)
+        return currentPlayer.team.name;
+    }
+
     return ( 
         <div className="playerDisplay-wrapper">
         <h1 className="name">{currentPlayer.first_name +" "+ currentPlayer.last_name}</h1>
-        <h2 className="team">{currentPlayer.team.full_name}</h2>
+        {currentPlayer.team && <h2 className="team-name">{currentPlayer.team.full_name}</h2>}{/*have to load this way or error will show on first render */}
         
         </div>
      );
