@@ -37,6 +37,11 @@ const PlayerDisplay = (props) => {
         return currentPlayer.team.name;
     }
 
+    const getStats =() =>{
+        
+    }
+
+
     return ( 
         <div className="playerDisplay-wrapper">
         <h1 className="name">{currentPlayer.first_name +" "+ currentPlayer.last_name}</h1>

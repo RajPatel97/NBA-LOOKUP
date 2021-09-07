@@ -9,7 +9,7 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles({
   root: {
     minWidth: 275,
-    width:900,
+    width:900, 
     position: 'absolute', left: '50%', top: '45%',
     transform: 'translate(-50%, -50%)',
     backgroundColor: 'rgb(66, 66, 66)',
