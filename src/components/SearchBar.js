@@ -21,7 +21,7 @@ const SearchBar = (props) => {
           placeholder='NBA LOOKUP'
           
         />
-        <button className='btn'>
+        <button  className='btn'>
           Search
         </button>
       </form>
