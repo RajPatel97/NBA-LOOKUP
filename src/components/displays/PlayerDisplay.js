@@ -17,7 +17,7 @@ const PlayerDisplay = (props) => {
 
     const getStats = (num)=>{
         let statsCall = `https://www.balldontlie.io/api/v1/season_averages?season=2020&player_ids[]=${num}`
-        fetch(defaultURL)
+        fetch(statsCall)
         .then(res => {
             if (!res.ok){
                 throw Error("Could not get the stats");
@@ -25,7 +25,7 @@ const PlayerDisplay = (props) => {
             return res.json();
         })
         .then(data => {
-            console.log(data)
+            //console.log(data)
             setSeasonData(data)
             setIsPending(false);
         })
@@ -53,7 +53,6 @@ const PlayerDisplay = (props) => {
             console.log(err.message);
         })
         if(currentPlayer){
-            console.log(currentPlayer.id)
             getStats(currentPlayer.id);
         }
         
