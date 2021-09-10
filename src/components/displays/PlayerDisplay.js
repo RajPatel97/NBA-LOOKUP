@@ -26,7 +26,7 @@ const PlayerDisplay = (props) => {
         })
         .then(data => {
             //console.log(data)
-            setSeasonData(data)
+            setSeasonData(data.data[0])
             setIsPending(false);
         })
         .catch(err=>{
@@ -66,6 +66,12 @@ const PlayerDisplay = (props) => {
         {currentPlayer && <p>Position: {currentPlayer.position}</p>}
         {currentPlayer && <p>Height: {currentPlayer.height_feet+" ft, "+currentPlayer.height_inches+" in"}</p>}
         {currentPlayer && <p>Weight: {currentPlayer.weight_pounds} lbs</p>}
+        <h3>Stats for the {seasonData.season} season:</h3>
+        <p>PPG: {seasonData.pts}</p>
+        <p>AST: {seasonData.ast}</p>
+        <p>REB: {seasonData.reb}</p>
+        <p>Games Played: {seasonData.games_played}</p>
+        <p>Minutes per game: {seasonData.min}</p>
         {console.log(seasonData)}
         
         </div>
