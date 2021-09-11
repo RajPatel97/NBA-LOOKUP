@@ -96,3 +96,8 @@ input{
   padding: 20px 20px 20px 20px;
   background-color: rgb(66, 66, 66);
 }
+
+.soon{
+  float: right;
+  background-color: #f7aaaa;
+}
